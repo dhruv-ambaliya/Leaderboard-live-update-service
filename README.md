@@ -10,16 +10,12 @@ This repository contains a **self‑contained Python utility** that reads an Exc
 
 A short rationale (`rationale.md`) explains the tie‑breakers and suggests additional criteria for future extensions.
 
----
-
-## Assumptions
 - The workbook contains a single sheet named **Leaderboard**.
 - The top table (player points) and bottom table (spending) share the same layout as shown in the sample file.
 - Columns for round scores are named `R01` … `R24` (24 events in the series).
 - Cells containing `D$Q` or `-` are treated as **0**.
 - No formulas need to be preserved – the script overwrites values with the sorted data.
 
-## Trade‑offs
 | Decision | Reasoning |
 |---|---|
 | **Pandas + Openpyxl** | Pandas gives powerful data‑manipulation; Openpyxl lets us preserve the original workbook structure and apply cell‑level styling (red fill). |
@@ -54,7 +50,7 @@ leaderboard-live-update-service/
 ├─ rationale.md                   # Design rationale & future ideas
 ├─ verify_ranking.py              # Simple verification script
 ├─ README.md                      # **You are reading it**
-└─ (generated) leaderboard_sorted.xlsx  # Output after running the script
+└─ leaderboard_sorted.xlsx        # Generated Output after running the script
 ```
 
 Each file is deliberately **single‑purpose** to keep the codebase approachable for intermediate‑to‑beginner developers.
@@ -78,13 +74,6 @@ Each file is deliberately **single‑purpose** to keep the codebase approachable
 
 ---
 
-## Expected Output (Illustrated)
-Below is a short animated GIF that shows the script being invoked, the console output, and a preview of the resulting Excel sheet with red‑highlighted ties.
-
-![Leaderboard Demo](C:/Users/AmbaliyaLaptop/.gemini/antigravity/brain/f8ce5732-6468-4b8c-912c-45716d371b46/leaderboard_demo_1764752903286.png)
-
----
-
 ## Future Improvements
 - **Command‑line arguments** for input/output paths, sheet name, and custom tie‑breaker selection.
 - **Unit‑test suite** using `pytest` to cover edge cases (e.g., all `D$Q`, missing columns).
@@ -93,11 +82,3 @@ Below is a short animated GIF that shows the script being invoked, the console o
 - **Configurable ranking pipeline** – plug‑in additional criteria such as recent form, disqualification count, or head‑to‑head comparison.
 - **Docker container** for reproducible execution across environments.
 
----
-
-## License
-This project is released under the **MIT License** – feel free to adapt, extend, or integrate it into larger systems.
-
----
-
-*Created with the assistance of an AI coding partner, aiming for clear, maintainable code suitable for developers at an intermediate level.*
