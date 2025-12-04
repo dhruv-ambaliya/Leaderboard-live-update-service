@@ -51,12 +51,7 @@ leaderboard-live-update-service/
 ├─ rank_leaderboard.py            # Main ranking implementation
 ├─ rationale.md                   # Design rationale & future ideas
 ├─ verify_ranking.py              # Simple verification script
-├─ README.md                      # **You are reading it**
 └─ leaderboard_sorted.xlsx        # Generated Output after running the script
-```
-
-Each file is deliberately **single‑purpose** to keep the codebase approachable for intermediate‑to‑beginner developers.
-
 ---
 
 ## How to Run
