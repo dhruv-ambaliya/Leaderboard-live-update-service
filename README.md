@@ -10,12 +10,14 @@ This repository contains a **self‑contained Python utility** that reads an Exc
 
 A short rationale (`rationale.md`) explains the tie‑breakers and suggests additional criteria for future extensions.
 
+## Challenge Details
 - The workbook contains a single sheet named **Leaderboard**.
 - The top table (player points) and bottom table (spending) share the same layout as shown in the sample file.
 - Columns for round scores are named `R01` … `R24` (24 events in the series).
 - Cells containing `D$Q` or `-` are treated as **0**.
 - No formulas need to be preserved – the script overwrites values with the sorted data.
 
+## Design Decisions
 | Decision | Reasoning |
 |---|---|
 | **Pandas + Openpyxl** | Pandas gives powerful data‑manipulation; Openpyxl lets us preserve the original workbook structure and apply cell‑level styling (red fill). |
@@ -74,7 +76,7 @@ Each file is deliberately **single‑purpose** to keep the codebase approachable
 
 ---
 
-## Future Improvements
+## Future Improvements (If i have more time)
 - **Command‑line arguments** for input/output paths, sheet name, and custom tie‑breaker selection.
 - **Unit‑test suite** using `pytest` to cover edge cases (e.g., all `D$Q`, missing columns).
 - **Web UI** (e.g., a lightweight Flask app) to upload a workbook and display the sorted table instantly.
