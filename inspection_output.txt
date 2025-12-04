@@ -1,0 +1,11 @@
+Sheet names: ['Leaderboard']
+
+--- Sheet: Leaderboard ---
+   Leaderboard                  Unnamed: 1  R01  ...   Total Unnamed: 27 Unnamed: 28
+0         Pos                      Player  Pts  ...  Points  Spent ($m)       $m/Pt
+1           1                  Cocoa Pops   45  ...    1001      139.27       0.139
+2           2  Craized Rhino Racing (CRR)   56  ...     461       73.11       0.159
+3           3       Cumberbatch Valentine   55  ...     371       59.22        0.16
+4           4       Dakota Eastern Racing   43  ...     806      130.68       0.162
+
+[5 rows x 29 columns]
